@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if [ -e "$HOME/.pre-oh-my-zsh" ]; then
+    source $HOME/.pre-oh-my-zsh
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

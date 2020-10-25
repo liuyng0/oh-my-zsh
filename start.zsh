@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+setopt +o nomatch
+
 if [ -e "$HOME/.pre-oh-my-zsh.zsh" ]; then
     source $HOME/.pre-oh-my-zsh.zsh
 fi

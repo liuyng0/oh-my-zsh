@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export LANG="en_US.UTF-8"
 setopt +o nomatch
 
 if [ -e "$HOME/.pre-oh-my-zsh.zsh" ]; then
@@ -123,3 +124,4 @@ if [[ "$POSSIBLE_ZEPPELIN_DAEMON" == "" ]] || ! [ -e  $POSSIBLE_ZEPPELIN_DAEMON 
     unset __conda_setup
     # <<< conda initialize <<<
 fi
+

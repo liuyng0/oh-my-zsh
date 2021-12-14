@@ -3,7 +3,6 @@
 
 export LANG="en_US.UTF-8"
 setopt +o nomatch
-set -o noglob
 
 if [ -e "$HOME/.pre-oh-my-zsh.zsh" ]; then
     source $HOME/.pre-oh-my-zsh.zsh

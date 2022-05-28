@@ -125,3 +125,5 @@ if [[ "$POSSIBLE_ZEPPELIN_DAEMON" == "" ]] || ! [ -e  $POSSIBLE_ZEPPELIN_DAEMON 
     # <<< conda initialize <<<
 fi
 
+fpath=($fpath "${CONFIG_ROOT_DIR}/function/common" "${CONFIG_ROOT_DIR}/function/${MY_HOST_SYSTEM}" "${CONFIG_PRIVATE_ROOT_DIR}/function/common" "${CONFIG_PRIVATE_ROOT_DIR}/function/${MY_HOST_SYSTEM}")
+autoload -Uz compinit && compinit

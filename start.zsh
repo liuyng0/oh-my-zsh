@@ -127,3 +127,11 @@ fi
 
 fpath=($fpath "${CONFIG_ROOT_DIR}/function/common" "${CONFIG_ROOT_DIR}/function/${MY_HOST_SYSTEM}" "${CONFIG_PRIVATE_ROOT_DIR}/function/common" "${CONFIG_PRIVATE_ROOT_DIR}/function/${MY_HOST_SYSTEM}")
 autoload -Uz compinit && compinit
+
+[[ -s "$HOME/.poetry/bin" ]] && export PATH="$HOME/.poetry/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[[ -s "$HOME/bin" ]] && export PATH="$PATH:$HOME/bin"

@@ -139,3 +139,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+[[ -s "$HOME/.gitconfig" ]] && export DOOMGITCONFIG="$HOME/.gitconfig"
+
+[[ -s "$HOME/.tmp_env" ]] && source "$HOME/.tmp_env"

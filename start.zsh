@@ -132,6 +132,8 @@ autoload -Uz compinit && compinit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
+unset JAVA_HOME
+unset JDK_HOME
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [[ -s "$HOME/bin" ]] && export PATH="$PATH:$HOME/bin"
@@ -141,9 +143,8 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 [[ -s "$HOME/.gitconfig" ]] && export DOOMGITCONFIG="$HOME/.gitconfig"
-unset JAVA_HOME
-unset JDK_HOME
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

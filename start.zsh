@@ -150,3 +150,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # homebrew environments
 # https://stackoverflow.com/questions/64963370/error-cannot-install-in-homebrew-on-arm-processor-in-intel-default-prefix-usr
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+[[ -s "$HOME/.wspl-tools/bin" ]] && export PATH="$PATH:$HOME/.wspl-tools/bin"

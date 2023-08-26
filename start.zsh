@@ -105,8 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
 [[ -s "$HOME/bin" ]] && export PATH="$PATH:$HOME/bin"
 
 [[ -s "$HOME/.gitconfig" ]] && export DOOMGITCONFIG="$HOME/.gitconfig"
@@ -114,6 +112,4 @@ source $ZSH/oh-my-zsh.sh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -s "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
-
 [[ -s "$HOME/.wspl-tools/bin" ]] && export PATH="$PATH:$HOME/.wspl-tools/bin"
-

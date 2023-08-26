@@ -75,7 +75,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,49 +106,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-POSSIBLE_ZEPPELIN_DAEMON=`ls $HOME/Software/zeppelin*/bin/zeppelin-daemon.sh 2>/dev/null`
-if [[ "$POSSIBLE_ZEPPELIN_DAEMON" == "" ]] || ! [ -e  $POSSIBLE_ZEPPELIN_DAEMON ]; then
-
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$($HOME/opt/anaconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "$HOME/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-            . "$HOME/opt/anaconda3/etc/profile.d/conda.sh"
-        else
-            export PATH="$HOME/opt/anaconda3/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-    # <<< conda initialize <<<
-fi
-
-fpath=($fpath "${CONFIG_ROOT_DIR}/function/common" "${CONFIG_ROOT_DIR}/function/${MY_HOST_SYSTEM}" "${CONFIG_PRIVATE_ROOT_DIR}/function/common" "${CONFIG_PRIVATE_ROOT_DIR}/function/${MY_HOST_SYSTEM}")
-autoload -Uz compinit && compinit
-
-[[ -s "$HOME/.poetry/bin" ]] && export PATH="$HOME/.poetry/bin:$PATH"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-unset JAVA_HOME
-unset JDK_HOME
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [[ -s "$HOME/bin" ]] && export PATH="$PATH:$HOME/bin"
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 [[ -s "$HOME/.gitconfig" ]] && export DOOMGITCONFIG="$HOME/.gitconfig"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
-# homebrew environments
-# https://stackoverflow.com/questions/64963370/error-cannot-install-in-homebrew-on-arm-processor-in-intel-default-prefix-usr
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [[ -s "$HOME/.wspl-tools/bin" ]] && export PATH="$PATH:$HOME/.wspl-tools/bin"
+

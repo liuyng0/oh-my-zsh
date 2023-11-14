@@ -76,7 +76,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 export KUBE_PS1_SYMBOL_ENABLE=false
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1 fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,3 +114,5 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.wspl-tools/bin" ]] && export PATH="$PATH:$HOME/.wspl-tools/bin"
+
+eval "$(zoxide init zsh)"

@@ -76,7 +76,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 export KUBE_PS1_SYMBOL_ENABLE=false
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1 fzf-tab)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1 fzf-tab zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -115,4 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s "$HOME/.wspl-tools/bin" ]] && export PATH="$PATH:$HOME/.wspl-tools/bin"
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878787,bg=303030,bold,underline"
+
 eval "$(zoxide init zsh)"

@@ -75,11 +75,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export KUBE_PS1_SYMBOL_ENABLE=true
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting kube-ps1 fzf-tab zsh-fzf-history-search)
+# export KUBE_PS1_SYMBOL_ENABLE=true
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
-export KUBE_PS1_ENABLED=false
+# export KUBE_PS1_ENABLED=false
 
 # User configuration
 

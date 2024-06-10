@@ -78,6 +78,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # export KUBE_PS1_SYMBOL_ENABLE=true
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab zsh-fzf-history-search)
 
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
 source $ZSH/oh-my-zsh.sh
 # export KUBE_PS1_ENABLED=false
 
